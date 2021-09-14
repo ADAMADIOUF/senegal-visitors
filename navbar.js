@@ -1,6 +1,6 @@
 const navBtn = document.getElementById('nav-toggle')
 const links = document.getElementById('nav-links')
-
+const date = document.querySelector('#date')
 navBtn.addEventListener('click', () => {
   links.classList.toggle('show-links')
 })
@@ -46,32 +46,23 @@ scrollLinks.forEach((link) => {
   })
 })
 
-
+date.innerHTML = new Date().getFullYear()
 // gallery
+//question welcome guide
 
-const current = document.querySelector('#current')
-const imgs = document.querySelector('.imgs')
-const img = document.querySelectorAll('.imgs img')
-const opacity = 0.6
+const questions = document.querySelectorAll('.question-btn')
 
-// Set first img opacity
-img[0].style.opacity = opacity
+questions.forEach(function (question) {
+  question.addEventListener('click', (e) => {
+    const question = e.currentTarget.parentElement.parentElement
+    question.classList.toggle('show-text')
+  })
+})
 
-imgs.addEventListener('click', imgClick)
+//fade
+AOS.init({
+  offset: 400, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 1000, // values from 0 to 3000, with step 50ms
+})
 
-function imgClick(e) {
-  // Reset the opacity
-  img.forEach((img) => (img.style.opacity = 1))
-
-  // Change current image to src of clicked image
-  current.src = e.target.src
-
-  // Add fade in class
-  current.classList.add('fade-in')
-
-  // Remove fade-in class after .5 seconds
-  setTimeout(() => current.classList.remove('fade-in'), 500)
-
-  // Change the opacity to opacity var
-  e.target.style.opacity = opacity
-}

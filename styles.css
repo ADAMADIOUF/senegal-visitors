@@ -227,319 +227,327 @@ p {
     margin-left: 1rem;
   }
 } 
-
-.hero{
-  background: linear-gradient(rgba(241, 8, 8, 0.973),rgba(225,25,225,01));
-  min-height: calc(100vh - 5rem);
-  display: grid;
-  place-items: center;
-
-  
-}
-
-  
-
-@media (min-width:768px) {
-  .hero{
-  background: url(/image/senegal-8.jpg)center/cover 
-  no-repeat;
-  min-height:calc(100vh - 5rem);
-  display: grid;
-  place-items: center;
-  margin: 0;
-  
-  
-}
-
-}
-.hero-banner{
-  text-align: center;
  
-}
 
-.hero-title{
-  text-align: center;
-  font-size: 1.5rem;
-  color: var(--choise-color);
-  font-weight: 800;
-  letter-spacing: var(--spacing);
-  margin-top: 5rem;
-}
-.hero-text {
-  max-width: 55rem;
-  font-size: 1.2rem;
-  font-weight: 900;
-  color:rgb(24, 17, 22);
-  letter-spacing: var(--spacing);
-  cursor: pointer;
-}
-@media (min-width:992px) {
-  .hero-text{
-    max-width: 60rem;
-  }
+/* hero */
+ .hero{
+   min-height: calc(100vh - 3rem);
+  background: url(/image/senegal-8.jpg)center/cover no-repeat;
   
-}
-
-.btn-tours{
-  padding: 1rem 0.75rem;
-  background: var(--white-choise);
+  background-attachment: fixed;
+  display: grid;
+  place-items: center;
   text-align: center;
-  border-radius: 5px;
-  color: #d62853;
-  font-size: 1rem;
-  font-weight: 600;
+}
+.hero-title{
+  color: var(--third-color);
+  font-size: 1.5rem;
   text-transform: capitalize;
+  font-weight: 500;
+}
+.hero-text{
+ width: 30rem;
+  color: var(--black-choise);
+  font-weight: 800;
+  font-size: 1.2rem;
   letter-spacing: var(--spacing);
+}
+.btn-visitor{
+  border-radius: 10px;
+  padding: 0.5rem;
+  background: transparent;
+  transition: var(--transition);
   cursor: pointer;
+}
+.btn-visitor:hover{
+  background: var(--primary-color);
+}
+.btn-tours {
+ display: block;
+ border-radius: 5px;
+  padding: 0.55rem;
+  
+  font-size: 1.2rem;
+  text-transform:capitalize;
+  letter-spacing: var(--spacing);
+  color: var(--white-choise);
+  transition: var(--transition);
 }
 .btn-tours:hover{
-  border:1px solid #000814;
-  background: transparent;
-  color: #d62853;
+  background: var(--white-choise);
+  color: var(--black-choise);
   
-} 
+}
 
+@media (min-width:992px) {
+  .hero-text{
+    max-width: 40rem;
+    font-weight: 600;
+  }
+  
+}
 /* about */
-
+.about{
+  text-align: center;
+}
 .about-title{
   text-align: center;
-  font-size: 1.5rem;
   color: var(--black-choise);
-  text-transform: capitalize;
-  font-weight: 600;
 }
-
 .img-about img{
-  max-width: 25rem;
+  width: 400px;
   object-fit: cover;
-  border-radius: 5px;
-  box-shadow: var(--light-shadow);
-  transition: var(--transition);
-  cursor: pointer;
 }
-
-.deatils-senegal p{
-  margin-top: 0.6rem;
-  max-width: 80rem;
-  font-size: 1.2rem;
-  color: var(--secondary-color);
+.deatils-senegal{
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  font-weight: 300;
 }
 @media (min-width:992px) {
- 
   .about-senegal{
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    gap: 2rem;
   }
   .img-about img{
-    max-width: 35rem;
+    width: 500px;
     
   }
-  .deatils-senegal p{
-    
-    margin-left: 8rem;
-    
+  .img-about{
+display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .deatils-senegal{
+    font-style: 1rem;
   }
   
 }
-
-/* bsetplaces */
-
+/* bestplaces */
+.best-places{
+  text-align: center;
+  background: var(--primary-color);
+}
 .best-title{
   text-align: center;
-  font-size: 1.5rem;
-  text-transform: capitalize;
   color: var(--black-choise);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.5rem;
 }
-
 .container-best img{
-  max-width: 25rem;
-  height: 30rem;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 5px;
-  box-shadow: var(--light-shadow);
+  border-radius: 10px;
   transition: var(--transition);
+  margin: 1rem;
   cursor: pointer;
-  
 }
 .container-best img:hover{
-  box-shadow: var(--light-shadow);
-  padding: 2rem;
-  object-fit: cover;
-  
+  transform: scale(1.1);
 }
 @media (min-width:768px) {
   .container-best{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2rem;
+    grid-template-columns: repeat(2,1fr);
   }
   
 }
 @media (min-width:992px) {
   .container-best{
     
-    grid-template-columns: 1fr 1fr 1fr;
-  
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
   }
   
 }
-
 /* welcome */
-#welcome{
-  position: relative;
+.welcome{
   background: url(/image/backgoud3.webp);
-  background-attachment: fixed;
   
-color: var(--choise-color);
-font-weight: 800;
-font-size: 1rem;
-letter-spacing: var(--spacing);
-}
-.welcome-title
-{
   text-align: center;
+}
+.welcome-title{
   font-size: 1.5rem;
+  text-transform: uppercase;
   font-weight: 400;
-  color: var(--white-choise);
+  color: var(--fourth-color);
+}
+.para-welcome p{
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 .para-welcome img{
-max-width: 25rem;
-border-radius: 5px;
-object-fit: cover;
-}
-@media (min-width:992px) {
-  .para-welcome{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 2rem;
-    
-  }
-  .para-welcome img{
-    max-width: 40rem;
-  }
-  .para-welcome p{
-    font-size: 1.5rem;
-  }
+  width: 400px;
+  object-fit: cover;
 }
 .carte-senegal{
-  position: relative;
+  margin-top: 1rem;
 }
-.carte-senegal p{
-  margin-top: 2rem;
+.para-welcome-2{
+  font-size: 1.2rem;
+  color: var(--choise-color);
+  font-weight: 500;
+  letter-spacing: var(--spacing);
 }
-
 .img-cart img{
-  max-width: 20rem;
-  height: 20rem;
-  display: block;
-  margin: 1rem auto;
+  width: 300px;
+  height: 200px;
   border-radius: 100%;
+  opacity: 0.5;
   transition: var(--transition);
-  opacity: 0.2;
+  cursor: pointer;
+  margin: 1rem;
 }
 .img-cart img:hover{
   opacity: 1;
 }
+.img-big-carte{
+  width: 400px;
+}
 @media (min-width:768px) {
-  .carte-senegal{
+  .img-cart {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+  .img-big-carte {
+    width: 900px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: var(--transition);
+    cursor: pointer;
+  }
+  .img-big-carte:hover{
+    transform: scale(1.1);
+    padding: -1rem;
+  }
+  
+}
+
+.hired{
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--choise-color);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.hired-details{
+  position: relative;
+}
+.hired-details img{
+ display: block;
+  position: relative;
+  width: 300px;
+  border-radius: 5px;
+  
+}
+.hired-details h2{
+  color: var(--fourth-color);
+}
+.hired-details span{
+  color: var(--choise-color);
+  font-size: 1.5rem;
+}
+
+  
+@media (min-width:992px) {
+  .hired-details{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
   }
-  .carte-senegal p{
-    max-width: 90rem;
+  .bg-img{
+  margin-top: 2rem;
+    position: relative;
+  }
+  .bg-img::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 3px dashed var(--fourth-color);
+    left: -2rem;
+    top: -2rem;
   }
 }
 
-
-
-.img-big-carte{
-  max-width: 25rem;
+.center-question{
+  margin-top: 1rem
+  ;
+}
+.question{
   
+  padding: 2rem;
+  border-radius: 5px;
 }
-/* gallery */
-
-.container {
-  max-width: 760px;
-  margin: auto;
-  border: #fff solid 3px;
-  background: #fff;
-  display: block;
-}
-
-.collection-title{
-  text-align: center;
+.question-title{
+  text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 400;
+  color: var(--white-choise);
+}
+.question-btn{
+cursor: pointer;
+transition: var(--transition);
+  background: transparent;
+  border-color: transparent;
+  font-size: 2rem;
+  color: var(--white-choise);
+}
+.minus-icon{
+  color: var(--clr-black);
+  display: none;
+}
+.question-text{
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--choise-color);
+  display: none;
+}
+.question-text {
+  display: none;
+}
+.show-text .question-text {
+  display: block;
+}
+.minus-icon {
+  display: none;
+}
+.show-text .minus-icon {
+  display: inline;
+}
+.show-text .plus-icon {
+  display: none;
+}
+/* footer */
+.footer{
+  background: var(--black-choise);
+  color: var(--choise-color);
+  text-align: center;
+}
+.contact-1 span{
+  font-size: 1.5rem;
   text-transform: capitalize;
 }
-.main-img img{
-  max-width: 20rem;
-  object-fit: cover;
-  height: 30rem;
+.contact-2 span{
+  color: var(--primary-color);
+  font-size: 1.5rem;
 }
-.imgs img{
-  max-width: 20rem;
-  height: 20rem;
-  justify-content: center;
+.footer-email{
+  font-size: 1.2rem;
 }
-
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+.footer-container{
+  cursor: pointer;
+  transition: var(--transition);
 }
-
-.fade-in {
-  opacity: 0;
-  animation: fadeIn var(--fade-time) ease-in 1 forwards;
+.footer-container:hover{
+  color: var(--third-color);
 }
-
-
 @media (min-width:992px) {
-  .imgs {
+  .footer-container{
     display: grid;
-    grid-template-columns: repeat(6,1fr);
-    justify-content: center;
+    grid-template-columns: repeat(3,1fr);
   }
-  .imgs img{
-  max-width: 18rem;
-  height: 10rem;
-  justify-content: center;
+  
 }
-  .main-img img{
-    max-width: 100rem;
-    height: 30rem;
-  }
-}
-
-.hired-details img{
-  max-width:25rem;
-  border-radius: 15px;
-  object-fit: cover;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
